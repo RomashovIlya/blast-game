@@ -1,0 +1,26 @@
+{
+  "name": "cocos-blast-test",
+  "license": "ISC",
+  "author": "Romashov Ilya",
+  "uuid": "37a135c9-3b03-4ee3-96f1-4eb1efe77eaf",
+  "version": "1.0.0",
+  "creator": {
+    "version": "3.8.1"
+  },
+  "scripts": {
+    "test": "npm-run-all test:typescript test:mocha",
+    "build": "npm-run-all -c build:web launch:web",
+    "build:web": "CocosCreator --project ./ --build \"configPath=./build-templates/config/build_config_web-desktop.json\"",
+    "launch:web": "http-server -a 127.0.0.1 -c-1 build/web-desktop -o",
+    "test:typescript": "tsc -p tsconfig-lint.json",
+    "test:mocha": "mocha"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "http-server": "^14.1.1",
+    "mocha": "^10.2.0",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^10.9.2",
+    "yargs": "^17.7.2"
+  }
+}
