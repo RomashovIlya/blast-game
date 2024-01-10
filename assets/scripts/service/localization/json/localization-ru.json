@@ -1,0 +1,32 @@
+{
+  "common": [
+    {
+      "slug_id": "board_turn",
+      "text": "Ходы: "
+    },
+    {
+      "slug_id": "board_score",
+      "text": "Очки: "
+    },
+    {
+      "slug_id": "result_win",
+      "text": "Победа!"
+    },
+    {
+      "slug_id": "result_lose",
+      "text": "Проигрыш..."
+    },
+    {
+      "slug_id": "result_restart",
+      "text": "Снова!"
+    },
+    {
+      "slug_id": "result_field",
+      "text": "Размер поля"
+    },
+    {
+      "slug_id": "result_tiles",
+      "text": "Количество тайлов"
+    }
+  ]
+}

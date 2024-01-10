@@ -1,0 +1,156 @@
+{
+  // Editor
+  // Controls whether the editor shows CodeLens.
+  "diffEditor.codeLens": true,
+  // When enabled, the diff editor ignores changes in leading or trailing whitespace.
+  "diffEditor.ignoreTrimWhitespace": true,
+  //  - off: Lines will never wrap.
+  //  - on: Lines will wrap at the viewport width.
+  //  - inherit: Lines will wrap according to the `editor.wordWrap` setting.
+  "diffEditor.wordWrap": "off",
+  // Controls whether the editor should automatically close brackets after the user adds an opening bracket.
+  //  - always
+  //  - languageDefined: Use language configurations to determine when to autoclose brackets.
+  //  - beforeWhitespace: Autoclose brackets only when the cIndentursor is to the left of whitespace.
+  //  - never
+  "editor.autoClosingBrackets": "always",
+  // Controls whether the editor should automatically close quotes after the user adds an opening quote.
+  //  - always
+  //  - languageDefined: Use language configurations to determine when to autoclose quotes.
+  //  - beforeWhitespace: Autoclose quotes only when the cursor is to the left of whitespace.
+  //  - never
+  "editor.autoClosingQuotes": "always",
+  // Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.
+  //  - none: The editor will not insert indentation automatically.
+  //  - keep: The editor will keep the current line's indentation.
+  //  - brackets: The editor will keep the current line's indentation and honor language defined brackets.
+  //  - advanced: The editor will keep the current line's indentation, honor language defined brackets and invoke special onEnterRules defined by languages.
+  //  - full: The editor will keep the current line's indentation, honor language defined brackets, invoke special onEnterRules defined by languages, and honor indentationRules defined by languages.
+  "editor.autoIndent": "advanced",
+  // On save
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  // Controls whether the editor shows CodeLens.
+  "editor.codeLens": true,
+  // Controls if empty lines should be ignored with toggle, add or remove actions for line comments.
+  "editor.comments.ignoreEmptyLines": true,
+  // Controls whether a space character is inserted when commenting.
+  "editor.comments.insertSpace": true,
+  // Defines a default formatter which takes precedence over all other formatter settings. Must be the identifier of an extension contributing a formatter.
+  "editor.defaultFormatter": null,
+  // Controls whether `editor.tabSize#` and `#editor.insertSpaces` will be automatically detected when a file is opened based on the file contents.
+  "editor.detectIndentation": false,
+  // Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+  "editor.formatOnPaste": false,
+  // Format a file on save. A formatter must be available, the file must not be saved after delay, and the editor must not be shutting down.
+  "editor.formatOnSave": true,
+  // Controls if format on save formats the whole file or only modifications. Only applies when `editor.formatOnSave` is enabled.
+  //  - file: Format the whole file.
+  //  - modifications: Format modifications (requires source control).
+  //  - modificationsIfAvailable: Will attempt to format modifications only (requires source control). If source control can't be used, then the whole file will be formatted.
+  "editor.formatOnSaveMode": "file",
+  // Controls whether the editor should automatically format the line after typing.
+  "editor.formatOnType": true,
+  // The number of spaces used for indentation or `"tabSize"` to use the value from `editor.tabSize#`. This setting is overridden based on the file contents when `#editor.detectIndentation` is on.
+  "editor.indentSize": "tabSize",
+  // Insert spaces when pressing `Tab`. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.insertSpaces": true,
+  // Controls strikethrough deprecated variables.
+  "editor.showDeprecated": true,
+  // Controls fading out of unused code.
+  "editor.showUnused": true,
+  // Whether leading and trailing whitespace should always be selected.
+  "editor.smartSelect.selectLeadingAndTrailingWhitespace": true,
+  // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+  // Remove trailing auto inserted whitespace.
+  "editor.trimAutoWhitespace": true,
+  // Controls how lines should wrap.
+  //  - off: Lines will never wrap.
+  //  - on: Lines will wrap at the viewport width.
+  //  - wordWrapColumn: Lines will wrap at `editor.wordWrapColumn`.
+  //  - bounded: Lines will wrap at the minimum of viewport and `editor.wordWrapColumn`.
+  "editor.wordWrap": "off",
+  // Enables prompting of users to use the TypeScript version configured in the workspace for Intellisense.
+  "typescript.enablePromptUseWorkspaceTsdk": true, //-?
+  // Enable/disable default TypeScript formatter.
+  "typescript.format.enable": true,
+  // Defines space handling after a comma delimiter.
+  "typescript.format.insertSpaceAfterCommaDelimiter": true,
+  // Defines space handling after function keyword for anonymous functions.
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+  // Defines space handling after keywords in a control flow statement.
+  "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+  // Defines space handling after opening and before closing empty braces.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+  // Defines space handling after opening and before closing non-empty braces.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  // Defines space handling after opening and before closing non-empty brackets.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  // Defines space handling after opening and before closing non-empty parenthesis.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  // Defines space handling after opening and before closing template string braces.
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+  // Defines space handling after a semicolon in a for statement.
+  "typescript.format.insertSpaceAfterSemicolonInForStatements": true,
+  // Defines space handling after type assertions in TypeScript.
+  "typescript.format.insertSpaceAfterTypeAssertion": false,
+  // Defines space handling after a binary operator.
+  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+  // Defines space handling before function argument parentheses.
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+  // Defines whether an open brace is put onto a new line for control blocks or not.
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": false,
+  // Defines whether an open brace is put onto a new line for functions or not.
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": false,
+  // Defines handling of optional semicolons.
+  //  - ignore: Don't insert or remove any semicolons.
+  //  - insert: Insert semicolons at statement ends.
+  //  - remove: Remove unnecessary semicolons.
+  "typescript.format.semicolons": "remove",
+  // Enable/disable implementations CodeLens. This CodeLens shows the implementers of an interface.
+  "typescript.implementationsCodeLens.enabled": true,
+  // Specify glob patterns of files to exclude from auto imports.
+  "typescript.preferences.autoImportFileExcludePatterns": [],
+  // Preferred path style for auto imports.
+  //  - shortest: Prefers a non-relative import only if one is available that has fewer path segments than a relative import.
+  //  - relative: Prefers a relative path to the imported file location.
+  //  - non-relative: Prefers a non-relative import based on the `baseUrl` or `paths` configured in your `jsconfig.json` / `tsconfig.json`.
+  //  - project-relative: Prefers a non-relative import only if the relative import path would leave the package or project directory.
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  // Preferred path ending for auto imports.
+  //  - auto: Use project settings to select a default.
+  //  - minimal: Shorten `./component/index.js` to `./component`.
+  //  - index: Shorten `./component/index.js` to `./component/index`.
+  //  - js: Do not shorten path endings; include the `.js` extension.
+  "typescript.preferences.importModuleSpecifierEnding": "auto",
+  // Enable/disable searching `package.json` dependencies for available auto imports.
+  //  - auto: Search dependencies based on estimated performance impact.
+  //  - on: Always search dependencies.
+  //  - off: Never search dependencies.
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  // Preferred quote style to use for Quick Fixes.
+  //  - auto: Infer quote type from existing code
+  //  - single: Always use single quotes: `'`
+  //  - double: Always use double quotes: `"`
+  "typescript.preferences.quoteStyle": "single",
+  // Enable/disable introducing aliases for object shorthand properties during renames.
+  "typescript.preferences.useAliasesForRenames": true,
+  // Enable/disable automatic updating of import paths when you rename or move a file in VS Code.
+  //  - prompt: Prompt on each rename.
+  //  - always: Always update paths automatically.
+  //  - never: Never rename paths and don't prompt.
+  "typescript.updateImportsOnFileMove.enabled": "prompt",
+  // Enable/disable TypeScript validation.
+  "typescript.validate.enable": true,
+  // Enable/disable default JSON formatter
+  "json.format.enable": true,
+  // Enable/disable JSON validation.
+  "json.validate.enable": true,
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "npm.enableRunFromFolder": true,
+  "cmake.sourceDirectory": "${workspaceFolder}/native/engine/android",
+  "java.configuration.updateBuildConfiguration": "automatic"
+}

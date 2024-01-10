@@ -1,0 +1,72 @@
+{
+  "levels": [
+    {
+      "slug_id": "test_level",
+      "turns": 7,
+      "score": 100,
+      "grid": {
+        "columns": 5,
+        "rows": 5
+      },
+      "tiles": 4,
+      "mixes": 2
+    }
+  ],
+  "basic_tiles": [
+    {
+      "slug_id": "purple",
+      "color": "purple"
+    },
+    {
+      "slug_id": "blue",
+      "color": "blue"
+    },
+    {
+      "slug_id": "green",
+      "color": "green"
+    },
+    {
+      "slug_id": "orange",
+      "color": "orange"
+    },
+    {
+      "slug_id": "yellow",
+      "color": "yellow"
+    },
+    {
+      "slug_id": "pink",
+      "color": "pink"
+    }
+  ],
+  "score_range": [
+    {
+      "size": 0,
+      "mod": 1
+    },
+    {
+      "size": 10,
+      "mod": 2
+    },
+    {
+      "size": 20,
+      "mod": 3
+    }
+  ],
+  "booster_range": [
+    {
+      "size": 5,
+      "type": "line",
+      "radius": -1
+    },
+    {
+      "size": 10,
+      "type": "bomb",
+      "radius": 2
+    },
+    {
+      "size": 25,
+      "type": "field",
+      "radius": -1
+    }
+  ]
+}
