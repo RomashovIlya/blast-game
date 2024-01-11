@@ -1,6 +1,7 @@
 import { _decorator } from 'cc'
 import { ConfigTileBoosterE } from '../../../service/config/entity/ConfigE'
 import { Matrix } from '../../../utils/matrix/Matrix'
+import { TurnModelData } from '../../turn/data/TurnModelData'
 import { BoxModelData } from '../data/BoxModelData'
 import { BoxPipelineTapE } from '../entity/BoxModelE'
 import { BoxTileT, TileGridT } from '../entity/BoxModelT'
@@ -25,36 +26,41 @@ export abstract class BoxModelBooster {
       return
     }
 
-    const { type, radius } = tile._DATA.booster
-
-    switch (type) {
-      case ConfigTileBoosterE.field:
-        this.blastField()
-        break
-      
-      case ConfigTileBoosterE.bomb:
-        this.blastBomb(tile._GRID, radius)
-        break
-      
-      case ConfigTileBoosterE.line:
-        this.blastLine(tile._GRID, radius)
-        break
-    }
+    TurnModelData._BURNED_TILES = this.getBlastAmount(tile)
 
     delete (BoxModelData._PIPELINE_TAP)
   }
 
 
   // PRIVATE
-  private static blastField() {
+  private static getBlastAmount(tile: BoxTileT): number {
+    const { type, radius } = tile._DATA.booster
+
+    switch (type) {
+      case ConfigTileBoosterE.field:
+        return this.getField()
+      
+      case ConfigTileBoosterE.bomb:
+        return this.getBomb(tile._GRID, radius)
+      
+      case ConfigTileBoosterE.line:
+        return this.getLine(tile._GRID, radius)
+    }
+
+    return 0
+  }
+
+  private static getField(): number {
     for (const tile of BoxModelData.field) {
       tile._REMOVE = {
         isBlast: true
       }
     }
+
+    return BoxModelData.field.length
   }
 
-  private static blastLine(tileGrid: TileGridT, radius: number) {
+  private static getLine(tileGrid: TileGridT, radius: number): number {
     let list = []
 
     if (radius === 0) {
@@ -70,9 +76,11 @@ export abstract class BoxModelBooster {
         isBlast: true
       }
     }
+
+    return list.length
   }
 
-  private static blastBomb(tileGrid: TileGridT, radius: number) {  
+  private static getBomb(tileGrid: TileGridT, radius: number): number {  
     const matrix = Matrix.getRadial({
       centerColumn: tileGrid.column,
       centerRow: tileGrid.row,
@@ -96,5 +104,7 @@ export abstract class BoxModelBooster {
         isBlast: true
       }
     }
+
+    return list.length
   }
 }
